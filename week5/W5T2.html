@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      body{
+        background: url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg);
+        background-size: auto;
+      }
+      #bigImage img{
+        width: 850px;
+        height: 500px;
+        position: relative;
+        top: 100px;
+        left: 100px;
+      }
+      #carousel{
+        position: relative;
+        bottom: 10px;
+        left: 80px;
+        border-left: 4px solid red;
+        background-color: white;
+        width: 660px;
+      }
+      #carousel img{
+        width: 120px;
+        height: 70px;
+        position: relative;
+        z-index: 2;
+        padding: 10px;
+      }
+      #i1, #i2, #i3, #i4{
+        position: relative;
+        left: 45px;
+      }
+      #left img{
+        width: 40px;
+        position: relative;
+        right: 7px;
+        bottom: 2px;
+      }
+      #right img{
+        width: 40px;
+        position: relative;
+        right: 7px;
+        bottom: 2px;
+      }
+      
+      #left{
+        position: relative;
+        bottom: 80px;
+        left: 90px;
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        z-index: 10;
+      }
+      #right{
+        position: relative;
+        bottom: 80px;
+        left: 655px;
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        z-index: 10;
+      }
+      #bigBorder{
+        position: relative;
+        bottom: 580px;
+        left: 860px;
+        border: 2px solid rgb(60, 60, 60);
+        width: 380px;
+        height: 570px;
+        background-color: rgb(60, 60, 60);
+        color: white;
+      }
+      #bigBorder #title{
+        position: relative;
+        top: 50px;
+        right: 50px;
+        font-size: 40px;
+      }
+      #bigBorder #def{
+        position: relative;
+        top: 100px;
+        margin-right: 40px;
+        margin-left: 40px;
+      }
+      #bigBorder #ShowMore{
+        position: absolute;
+        top: 480px;
+        left: 50px;
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+        text-align: left;
+        padding-left: 10px;
+        background-color: rgb(60, 60, 60);
+        color: white;
+      }
+      #showarrow{
+        width: 40px;
+        position: relative;
+        bottom: 670px;
+        left: 1067px; 
+        border: 2px solid white;
+        background-color: white;
+        height: 42px;
+      }
+    </style>
+    <script src="jscript2.js" defer></script>
+  </head>
+
+  <body>
+    <div id="bigImage">
+      <img id="i0" src="https://the-drive-2.imgix.net/https%3A%2F%2Fapi.thedrive.com%2Fwp-content%2Fuploads%2F2018%2F08%2F516346.jpg%3Fquality%3D85?w=1440&auto=compress%2Cformat&ixlib=js-1.4.1&s=c40d4168f8d70db845d99e8018486853"/>
+    </div>
+    <div id="carousel">
+          <img id="i1" src="https://the-drive-2.imgix.net/https%3A%2F%2Fapi.thedrive.com%2Fwp-content%2Fuploads%2F2018%2F08%2F516346.jpg%3Fquality%3D85?w=1440&auto=compress%2Cformat&ixlib=js-1.4.1&s=c40d4168f8d70db845d99e8018486853"/>
+          <img id="i2" src="https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/1.2019-tesla-roadster-press-1001-565.jpg"/>
+          <img id="i3" src="https://the-drive-3.imgix.net/https%3A%2F%2Fs3.amazonaws.com%2Fthe-drive-staging%2Fmessage-editor%252F1533179689909-dg019_036cldb48fqtpf3gmanrq85550q3mop.jpg?auto=compress%2Cformat&ixlib=js-1.4.1&s=a75759c42ac3b4cab3a4139616df4a4d"/>
+          <img id="i4" src="https://cdn.vox-cdn.com/thumbor/r1y_QHuvvCbQqKDcpEWP7h_TVYo=/0x0:3600x2400/1200x800/filters:focal(1512x912:2088x1488)/cdn.vox-cdn.com/uploads/chorus_image/image/58926785/c_two_studio_front34_01.0.jpg"/>
+    </div>
+    <button id="left" onclick= "LeftClick()"><img src="https://icons-for-free.com/iconfiles/png/512/arrow+circle+arrow+left+arrowleftcircle+left+icon+icon-1320185730574257581.png"></button>
+    <button id="right" onclick= "RightClick()"><img src="https://icons-for-free.com/iconfiles/png/512/arrow+circle+arrow+right+arrowrightcircle+right+icon+icon-1320185730725758186.png"></button>
+    <div id="bigBorder">
+      <div id="title">Lamborghini Aventador SVJ</div>
+      <div id="def">The new Lamborghini Aventador SVJ adopts the Italian automaker's famous "Jota" moniker, which adds another layer of hardcore-ness to the already racy SV trim by calling on the spirit of the powerful Miura P400 Jota from the '70s, which was designed to meet the FIA's "J" class rulebook. This new Raging Bull comes to life via a 6.5-liter, 48-valve V-12 that carries 4.42 pounds with each of its 759 horses. As a result, the SVJ can deliver a zero to 60 time of 2.8 and reach a maximum speed of 217 miles per hour. </div>
+      <button id="ShowMore" onClick= "Showmore()">Show more</button>
+    </div>
+    <img id="showarrow" src="https://www.stickpng.com/assets/images/585e469fcb11b227491c3374.png">
+  </body>
+
+</html>
