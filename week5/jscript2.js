@@ -9,7 +9,7 @@ function LeftClick() {
 	switch(ekran) {
   		case a:
   			document.getElementById("i0").src = d;
-    		document.getElementById("title").innerHTML = "Rimacs new electric hypercar";
+    		document.getElementById("title").innerHTML = "Rimac new electric hypercar";
   			document.getElementById("def").innerHTML = "Lets dispense with the hyperbole: Croatias Rimac Automobili built a very, very fast car that they’d like to show you. It is an all-electric hypercar called the Concept Two that debuted today at the Geneva Motor Show. It claims to have a 1,914-horsepower engine that enables a 0 to 60 mph acceleration in 1.85 seconds. That would make it one of the quickest cars in existence, quicker than the next-generation Tesla Roadster with its comparatively sluggish 0–60 in 1.9 seconds.";
     		break;
   		case b:
@@ -19,7 +19,7 @@ function LeftClick() {
     		break;
   		case c:
   			document.getElementById("i0").src = b;
-    		document.getElementById("title").innerHTML = "Tesla's Roadster";
+    		document.getElementById("title").innerHTML = "Tesla Roadster";
   			document.getElementById("def").innerHTML = "Tesla boss Elon Musk has made one of his patented bold claims about the incoming Roadster, promising his electric sports car will be able to clip 60mph (96.5km/h) in just 2.1 seconds. That's very, very fast. For reference, the Porsche 918 Spyder claims a 2.2 second sprint, while the Ferrari LaFerrari has been clocked at 2.4 seconds. It means the Tesla Roadster will have them both beat. And what's more, Musk is promising that the eyebrow-peeling speed will be on offer from even the base-model cars.The claim, made on Twitter, actually attracted some criticism, with other users quick to point out that Musk had previously promised it would be even faster.";
     		break;
   		case d:
@@ -40,7 +40,7 @@ function RightClick() {
 	switch(ekran) {
   		case a:
   			document.getElementById("i0").src = b;
-  			document.getElementById("title").innerHTML = "Tesla's Roadster";
+  			document.getElementById("title").innerHTML = "Tesla Roadster";
   			document.getElementById("def").innerHTML = "Tesla boss Elon Musk has made one of his patented bold claims about the incoming Roadster, promising his electric sports car will be able to clip 60mph (96.5km/h) in just 2.1 seconds. That's very, very fast. For reference, the Porsche 918 Spyder claims a 2.2 second sprint, while the Ferrari LaFerrari has been clocked at 2.4 seconds. It means the Tesla Roadster will have them both beat. And what's more, Musk is promising that the eyebrow-peeling speed will be on offer from even the base-model cars.The claim, made on Twitter, actually attracted some criticism, with other users quick to point out that Musk had previously promised it would be even faster.";
     		break;
   		case b:
@@ -50,7 +50,7 @@ function RightClick() {
     		break;
   		case c:
   			document.getElementById("i0").src = d;
-  			document.getElementById("title").innerHTML = "Rimacs new electric hypercar";
+  			document.getElementById("title").innerHTML = "Rimac new electric hypercar";
   			document.getElementById("def").innerHTML = "Lets dispense with the hyperbole: Croatias Rimac Automobili built a very, very fast car that they’d like to show you. It is an all-electric hypercar called the Concept Two that debuted today at the Geneva Motor Show. It claims to have a 1,914-horsepower engine that enables a 0 to 60 mph acceleration in 1.85 seconds. That would make it one of the quickest cars in existence, quicker than the next-generation Tesla Roadster with its comparatively sluggish 0–60 in 1.9 seconds.";
     		break;
   		case d:
@@ -61,5 +61,23 @@ function RightClick() {
 	}
 }
 function Showmore(){
-	window.open("https://www.thedrive.com/new-cars/22522/the-top-10-fastest-production-cars-in-the-world-in-2019");
+	let a = document.getElementById("i1").src;
+	let b = document.getElementById("i2").src;
+	let c = document.getElementById("i3").src;
+	let d = document.getElementById("i4").src;
+	let ekrans = document.getElementById("i0").src;
+	switch(ekrans){
+	case a:
+		window.open("https://www.lamborghini.com/ru-en/%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8/aventador/aventador-svj");
+		break;
+	case b:
+		window.open("https://www.tesla.com/roadster");
+		break;
+	case c:
+		window.open("http://hennesseyperformance.com/vehicles/dodge/2019-dodge-challenger-srt-hellcat-redeye/");
+		break;
+	case d:
+		window.open("https://www.theverge.com/2018/3/6/17086808/rimac-concept-two-electric-hypercar-geneva-motor-show-2018");
+		break;
+	}
 }
