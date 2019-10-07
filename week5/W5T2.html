@@ -3,16 +3,17 @@
 
   <head>
     <style>
-      body{
+      /*body{
         background: url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg);
         background-size: auto;
-      }
+      }*/
       #bigImage img{
         width: 850px;
         height: 500px;
         position: relative;
         top: 100px;
         left: 100px;
+        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.8);
       }
       #carousel{
         position: relative;
@@ -25,9 +26,10 @@
       #carousel img{
         width: 120px;
         height: 70px;
+        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.8);
         position: relative;
         z-index: 2;
-        padding: 10px;
+        margin: 10px 10px;
       }
       #i1, #i2, #i3, #i4{
         position: relative;
@@ -55,6 +57,7 @@
         width: 40px;
         height: 40px;
         z-index: 10;
+        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.8);
       }
       #right{
         position: relative;
@@ -65,6 +68,7 @@
         width: 40px;
         height: 40px;
         z-index: 10;
+        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.8);
       }
       #bigBorder{
         position: relative;
@@ -75,6 +79,7 @@
         height: 570px;
         background-color: rgb(60, 60, 60);
         color: white;
+        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.8);
       }
       #bigBorder #title{
         position: relative;
@@ -128,7 +133,7 @@
     <div id="bigBorder">
       <div id="title">Lamborghini Aventador SVJ</div>
       <div id="def">The new Lamborghini Aventador SVJ adopts the Italian automaker's famous "Jota" moniker, which adds another layer of hardcore-ness to the already racy SV trim by calling on the spirit of the powerful Miura P400 Jota from the '70s, which was designed to meet the FIA's "J" class rulebook. This new Raging Bull comes to life via a 6.5-liter, 48-valve V-12 that carries 4.42 pounds with each of its 759 horses. As a result, the SVJ can deliver a zero to 60 time of 2.8 and reach a maximum speed of 217 miles per hour. </div>
-      <button id="ShowMore" onClick= "Showmore()">Show more</button>
+      <button id="ShowMore" onclick= "Showmore()">Show more</button>
     </div>
     <img id="showarrow" src="https://www.stickpng.com/assets/images/585e469fcb11b227491c3374.png">
   </body>
