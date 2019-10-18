@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css6_1.css">
+	<script src="jscript6_1.js" defer></script>
+</head>
+<body>
+	<div id="header">
+		<div id="logo"><img src="oracle-logo.png"></div>
+		<div id="bell"><img src="bell.png"></div>
+		<div id="photo"><img src="http://images.clipartpanda.com/person-clipart-pioAEpo6T.svg"></div>
+		<input id="headtype" type="text" placeholder="Search..">
+	</div>
+	<div id=leftside><img src="home.png"></div>
+	<p><img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/37948/preview.svg">Back</p>
+	<span>Home / Admin / User Managements</span>
+	<h3 id="Dash">Dashboard Users</h3>
+	<div id="elements">
+		<div id = "tabUsers">Users</div>
+		<div id = "tabReports">Reports</div>
+		<div id = "tabRequests">Requests</div>
+		<div id = "tabDisabledUsers">Disabled Users</div>
+		<img src= "ellipsis.png">
+	</div>
+	<button id="AddUser" onclick="AddUsers()"><img src="add-user-male.png"><div>Add User</div></button>
+	<div id="clients">
+		<table id="tableClients" width="88.2%">
+			<tr>
+				<td>
+					<label class="container">
+						<input type="checkbox" unchecked="unchecked">
+						<span class="checkmark"></span>
+					</label>
+				</td>
+				<td>Account Status</td>
+				<td>User Name</td>
+				<td>Email</td>
+				<td>Account Type</td>
+				<td>Phone</td>
+				<td>Mode</td>
+				<td id="TopActions">Actions</td>
+
+			</tr>
+			<tr>
+				<td>
+					<label class="container">
+						<input type="checkbox" unchecked="unchecked">
+						<span class="checkmark"></span>
+					</label>
+				</td>
+				<td id="clientStatus">Inactive</td>
+				<td id="clientPhoto"><img src="http://images.clipartpanda.com/person-clipart-pioAEpo6T.svg"> User Surname</td>
+				<td id="clientEmail">user@user.com</td>
+				<td id="clientType">Master Admin</td>
+				<td></td>
+				<td></td>
+				<td><img id="glaza" src="eye.png">
+				<button id="clientRemove" onclick="DeleteUser(this)"><img src="trash.png"></button>
+				<button id="clientEdit" onclick="EditUser(this)"><img src="pencil.png"></button></td>
+			</tr>
+			<tr>
+				<td>
+					<label class="container">
+						<input type="checkbox" unchecked="unchecked">
+						<span class="checkmark"></span>
+					</label>
+				</td>
+				<td id="clientStatus">Inactive</td>
+				<td id="clientPhoto"><img src="http://images.clipartpanda.com/person-clipart-pioAEpo6T.svg"> User Surname</td>
+				<td id="clientEmail">user@user.com</td>
+				<td id="clientType">Admin</td>
+				<td></td>
+				<td></td>
+				<td><img id="glaza" src="eye.png">
+				<button id="clientRemove" onclick="DeleteUser(this)"><img src="trash.png"></button>
+				<button id="clientEdit" onclick="EditUser(this)"><img src="pencil.png"></button></td>
+			</tr>
+			<tr>
+				<td>
+					<label class="container">
+						<input type="checkbox" unchecked="unchecked">
+						<span class="checkmark"></span>
+					</label>
+				</td>
+				<td id="clientStatus">Active</td>
+				<td id="clientPhoto"><img src="http://images.clipartpanda.com/person-clipart-pioAEpo6T.svg"> User Surname</td>
+				<td id="clientEmail">user@user.com</td>
+				<td id="clientType">User</td>
+				<td></td>
+				<td></td>
+				<td><img id="glaza" src="eye.png">
+				<button id="clientRemove" onclick="DeleteUser(this)"><img src="trash.png"></button>
+				<button id="clientEdit" onclick="EditUser(this)"><img src="pencil.png"></button></td>
+			</tr>
+			<tr>
+				<td>
+					<label class="container">
+						<input type="checkbox" unchecked="unchecked">
+						<span class="checkmark"></span>
+					</label>
+				</td>
+				<td id="clientStatus">Inactive</td>
+				<td id="clientPhoto"><img src="http://images.clipartpanda.com/person-clipart-pioAEpo6T.svg"> User Surname</td>
+				<td id="clientEmail">user@user.com</td>
+				<td id="clientType">User</td>
+				<td></td>
+				<td></td>
+				<td><img id="glaza" src="eye.png">
+				<button id="clientRemove" onclick="DeleteUser(this)"><img src="trash.png"></button>
+				<button id="clientEdit" onclick="EditUser(this)"><img src="pencil.png"></button></td>
+			</tr>
+			<tr>
+				<td>
+					<label class="container">
+						<input type="checkbox" unchecked="unchecked">
+						<span class="checkmark"></span>
+					</label>
+				</td>
+				<td id="clientStatus">Active</td>
+				<td id="clientPhoto"><img src="http://images.clipartpanda.com/person-clipart-pioAEpo6T.svg"> User Surname</td>
+				<td id="clientEmail">user@user.com</td>
+				<td id="clientType">Semi Admin</td>
+				<td></td>
+				<td></td>
+				<td><img id="glaza" src="eye.png">
+				<button id="clientRemove" onclick="DeleteUser(this)"><img src="trash.png"></button>
+				<button id="clientEdit" onclick="EditUser(this)"><img src="pencil.png"></button></td>
+			</tr>
+		</table>
+	</div>
+	<div id="box">
+		<img src="https://cdn3.iconfinder.com/data/icons/in-and-around-the-house/43/trash_bin-512.png">
+	<h2>Are u sure, want to delete?</h2>
+	<a class="delete" onclick="DeleteUser('delete')">Delete</a>
+	<a class="close" onclick="popClo()">Cancel</a>
+	</div>
+	<div id="boxAdd">
+		<h3>Add new user:</h3>
+		<div id="def">Lorem ipson agiuhsuifndknajvnfdjvioasjjsndvjahfdgjdbvjkabdfjvnadsjv sadsasds</div>
+		<label id="nameAdd">Name</label>
+		<input id="nameAddd" type="text" name="nameAdd">
+		<label id="emailAdd">Email</label>
+		<input id="emailAddd" type="text" name="emailAdd">
+		<label id="labelAdd">Phone</label>
+		<input id="phoneAddd" type="text" name="phoneAdd">
+		<select name="option" id="selectionAdd">
+			<option value="-1" disabled selected>Account Type</option>
+			<option value="Admin">Admin</option>
+			<option value="Semi Admin">Semi Admin</option>
+			<option value="Master Admin">Master Admin</option>
+			<option value="User">User</option>
+		</select>
+		<p id="checker">
+		  <input type="checkbox" unchecked="unchecked" id="seter">
+		  <label>Set Active</label></p>
+		 <button onclick="AddToTable()">Add new user</button>
+	</div>
+	</div>
+	<div id="boxEdit">
+		<h3>Edit user:</h3>
+		<div id="def">Lorem ipson agiuhsuifndknajvnfdjvioasjjsndvjahfdgjdbvjkabdfjvnadsjv sadsasds qwerty</div>
+		<label id="nameAdd">Name</label>
+		<input type="text" name="nameAdd" id="nameAdd2">
+		<label id="emailAdd">Email</label>
+		<input type="text" name="emailAdd" id="emailAdd2">
+		<label id="labelAdd">Phone</label>
+		<input type="text" name="phoneAdd" id="phoneAdd2">
+		<select name="option" id="selectionAdd2">
+			<option value="-1" disabled selected>Account Type</option>
+			<option value="Admin">Admin</option>
+			<option value="Semi Admin">Semi Admin</option>
+			<option value="Master Admin">Master Admin</option>
+			<option value="User">User</option>
+		</select>
+		<p id="checker">
+		  <input type="checkbox" unchecked="unchecked" id="seter2">
+		  <label>Set Active</label></p>
+		 <button onclick="saveData()">Save user datas</button>
+	</div>
+</body>
+</html>

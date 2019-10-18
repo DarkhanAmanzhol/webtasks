@@ -1,0 +1,348 @@
+#header{
+	border-bottom: 2px solid lightgray;
+	width: 100%;
+	height: 50px;
+	//box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);\
+	position: fixed;
+}
+#logo img{
+	width: 75px;
+	position: relative;
+	left: 20px;
+	bottom: 20px;
+}
+#photo img{
+	width: 35px;
+	position: relative;
+	bottom: 160px;
+	left: 1299px;
+	border-left: 1px solid lightgray;
+	padding: 7px;
+}
+#bell img{
+	position: relative;
+	width: 30px;
+	left: 1230px;
+	bottom: 98px;
+	padding: 20px;
+	border-left: 1px solid lightgray;
+}
+#headtype{
+	position: relative;
+	left: 1000px;
+	bottom: 200px;
+	width: 200px;
+}
+#leftside{
+	border-right: 1px solid lightgray;
+	position: absolute;
+	top: 60px;
+	height: 600px;
+	width: 139px;
+}
+#leftside img{
+	width: 90px;
+	position: relative;
+	top: 120px;
+	left: 20px;
+}
+p{
+	position: relative;
+	top: 10px;
+	left: 170px;
+	font-size: 12px;
+}
+p img{
+	 width: 10px;
+	 position: relative;
+	 right: 5px;
+	 bottom: 2px;
+}
+span{
+	position: relative;
+	bottom: 20px;
+	left: 260px;
+	font-size: 12px;
+}
+#elements{
+	border-bottom: 1px solid lightgray;
+	position: relative;
+	bottom: 90px;
+	left: 140px;
+	display: flex;
+}
+#elements img{ 
+	width: 25px;
+	position: relative;
+	left: 30px;
+	bottom: 5px;
+}
+#elements div{
+	border: 1px solid transparent;
+	height: 25px;
+	width: 120px;
+	text-align: center;
+}
+#elements #tabUsers{
+	border-bottom: 4px solid blueviolet;
+}
+#Dash{
+	position: relative;
+	top: 60px;
+	left: 135px;
+	border-left: 4px solid blueviolet;
+	padding: 20px 0px;
+	width: 220px;
+	text-align: center;
+}
+#emailBoxElement{
+	position: relative;
+	top: 20px;
+	left: 210px;
+	display: flex;
+	border-bottom: 1px solid lightgray;
+}
+#emailBoxElement div{
+	border: 1px solid white;
+	height: 25px;
+	width: 165px;
+	text-align: center;
+}
+#AddUser{
+	position: relative;
+	bottom: 100px;
+	float: right;
+	margin: 20px;
+	width: 120px;
+	padding: 10px;
+	border-color: blue;
+	background-color: blueviolet;
+	outline: none;	
+	cursor: pointer;
+	height: 40px;
+}
+#AddUser div{
+	position: relative;
+	bottom: 36px;
+	left: 20px;
+}
+#AddUser img{
+	width: 33px;
+	position: relative;
+	right: 36px;
+	bottom: 9px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  bottom: 10px;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid blueviolet;
+  background-color: transparent;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid blueviolet;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+}
+#clients{
+	position: relative;
+	left: 145px;
+	bottom: 60px;
+}
+#clientPhoto img{
+	width: 20px;
+}
+#clientPhoto{
+	width: 20px;
+}
+#glaza{
+	width: 20px;
+}
+#clientRemove{
+	position: relative;
+	left: 4px;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+	border: none;
+}
+#clientRemove img{
+	width: 20px;
+	height: 20px;
+	border: none;
+}
+#clientEdit{
+	position: relative;
+	left: 2px;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+	border: none;
+}
+#clientEdit img{
+	width: 20px;
+	height: 20px;
+	border: none;
+}
+td {
+  padding: 20px;
+  text-align: left;
+  //border-bottom: 1px solid #ddd;
+}
+/*tr:hover {
+	background-color: #f5f5f5;
+}*/
+
+#box{
+	width:500px;
+	height: 300px;
+	overflow: hidden;
+	background: lightgray;
+	border: 2px solid gray;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+	padding: 10px;
+	text-align: center;
+	display: none;
+}
+#box img{
+	margin-top: 40px;
+	width: 100px;
+}
+#box h2{
+	color: black;
+}
+.close{
+	font-size: 20px;
+	color: gray;
+	padding: 10px 20px;
+	cursor: pointer;
+	background-color: white;
+	display: inline-block;
+	border: 1px solid gray;
+	width: 140px;
+}
+.delete{
+	font-size: 20px;
+	color: gray;
+	padding: 10px 20px;
+	cursor: pointer;
+	background-color: blueviolet;
+	display: inline-block;
+	border: 1px solid gray;
+	width: 140px;
+}
+
+#boxAdd, #boxEdit{
+	border: 1px solid gray;
+	width: 400px;
+	height: 87%;
+	overflow: hidden;
+	background: white;
+	position: absolute;
+	top: 60px;
+	left: 69%;
+	z-index: 10;
+	padding: 10px;
+	display: none;
+}
+#boxAdd label, #boxEdit label{
+	position: relative;
+	top: 100px;
+}
+#boxAdd h3, #boxEdit h3{
+	color: black;
+	position: relative;
+	top: 60px;
+}
+#boxAdd #def, #boxEdit #def{
+	position: relative;
+	top: 60px;
+}
+#boxAdd button, #boxEdit button{
+	position: relative;
+	top: 130px;
+	left: 190px;
+	font-size: 12px;
+	color: white;
+	padding: 10px 20px;
+	cursor: pointer;
+	background-color: blueviolet;
+	display: inline-block;
+	border: 1px solid gray;
+	width: 180px;
+}
+#boxAdd input[type=text], #boxEdit input[type=text] {
+	position: relative;
+	top: 100px;
+	width: 100%;
+	padding: 0px 20px;
+	margin: 4px 20px;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid gray;
+	outline: none;
+	font-size: 26px;
+}
+#selectionAdd, #selectionAdd2{
+	position: relative;
+	top: 150px;
+	width: 400px;
+	height: 30px;
+}
+#checker{
+	position: relative;
+	top: 80px;
+	left: 50px;
+}
+#checker input{
+	position: relative;
+	top: 102px;
+	right: 5px;
+}
+table{
+	border-color: transparent;
+}

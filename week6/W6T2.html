@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css6_2.css">
+	<script src="jscript6_2.js" defer></script>
+</head>
+<body>
+	<div id="tabContainer">
+		<div id="buttonContainer">
+			<button onclick="showPanel(0)">Tools</button>
+			<button onclick="showPanel(1)">Frame Properties</button>
+		</div>
+		<div id="tabPanel">
+			<div id="tabPos">
+				<div id="PosX">Position X</div>
+				<div id="PosY">Position Y</div>
+				<div id="PosType">Position Type</div>
+				<div id="Obj">Object</div>
+				<div id="Own">Here you can add your own css propertiesas you wish</div>
+			</div>
+			<div id="tabInput">
+				<input id="posX" type="text" size="30"></br>
+				<input id="posY" type="text" size="30"></br>
+				<input id="posType" type="text" placeholder="Absolute | Relative | Fixed" size="30"></br>
+				<select id="obj">
+				  <option value="-1"></option>
+				  <option value="1">House</option>
+				  <option value="2">Grass</option>
+				  <option value="3">Tree</option>
+				  <option value="4">Sun</option>
+				</select></br>
+				<input id="wish" type="text" size="30"></br>
+			</div>
+			<button id="addFrame" onclick="AddFrame()">Add object to the frame</button>
+
+		</div>
+		<div id="tabPanel">
+			<div id="tabWidthHeight">
+				<div id="Backgro">Background</div>
+				<div id="BordRad">Border Radius</div>
+				<div id="Width">Width</div>
+				<div id="Height">Height</div>
+				<div id="Own2">Here you can add your own css propertiesas you wish</div>
+			</div>
+			<div id="tabInput2">
+				<input id="backgro1" type="text" size="30"></br>
+				<input id="bordrad1" type="text" size="30"></br>
+				<input id="width1" type="text" placeholder="Absolute | Relative | Fixed" size="30"></br>
+				<input id="height1" type="text" size="30"></br>
+				<input id="wish2" type="text" size="30"></br>
+			</div>
+			<button id="saveFrame" onclick="createFrame()">Save Frame Setting</button>
+		</div>
+	</div>
+	<div id="BigFrame">
+		<img id="img1" src="http://pngimg.com/uploads/house/house_PNG73.png">
+		<img id="img2" src="http://pngimg.com/uploads/grass/grass_PNG10863.png">
+		<img id="img3" src="http://pngimg.com/uploads/christmas_tree/christmas_tree_PNG140.png">
+		<img id="img4" src="http://pngimg.com/uploads/sun/sun_PNG13449.png">
+	</div>
+
+</body>
+</html>
