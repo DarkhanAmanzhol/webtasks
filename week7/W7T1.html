@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<style>
+		div[data-status='done'] span{
+		  text-decoration:line-through;
+		}
+	</style>
+  </head>
+
+  <body>
+    <div id="tasks">
+      <div>
+        <button onclick="ButtonFinish('w1')">Finish</button>
+        <span id="w1">Finish web tasks</span>
+      </div>
+      <div>
+        <button onclick="ButtonFinish('w2')">Finish</button>
+        <span id="w2">Go to gym</span>
+      </div>
+      <div>
+        <button onclick="ButtonFinish('w3')">Finish</button>
+        <span id="w3">Clean home</span>
+      </div>
+      <div>
+        <button onclick="ButtonFinish('w4')">Finish</button>
+        <span id="w4">Start project</span>
+      </div>
+      <div>
+        <button onclick="ButtonFinish('w5')">Finish</button>
+        <span id="w5">Prepare to calculus</span>
+      </div>
+    </div>
+  </body>
+  <script>
+    var i = 0;
+    function ButtonFinish(finisher){
+      if(i==0){
+        document.getElementById(finisher).style.textDecoration = "line-through";
+        i=1;
+      }
+      else if(i==1){
+        document.getElementById(finisher).style.textDecoration = "none";
+        i=0;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+		#cars{
+		  display:flex;
+		  flex-wrap:wrap;
+		}
+		#insideBasket{
+		  border:1px solid red;
+		  text-align:center;
+		}
+		#crt1{
+		  background-color: white;
+		  position:relative;
+		  right:68px;
+		  bottom: 50px;
+		  z-index:1;
+		  cursor: pointer;
+		}
+		#crt2{
+		  background-color: white;
+		  position:relative;
+		  right:68px;
+		  bottom:104px;
+		  z-index:1;
+		  cursor: pointer;
+		}
+		#crt3{
+		  background-color: white;
+		  position:relative;
+		  right:68px;
+		  bottom:162px;
+		  z-index:1;
+		  cursor: pointer;
+		}
+		p{
+			font-size: 30px;
+		}
+	</style>
+  </head>
+
+  <body>
+    <div id="insideBasket"><span id="items">0</span> items, total: <span id="sum">0</span>$</div>
+    <div id="cars">
+      
+    </div>
+  </body>
+  <script>
+  	let cars = [{brand:'Toyota',model:'Camry','year':1999,'price':20000,image_url:"https://media.ed.edmunds-media.com/toyota/camry/2016/ot/2016_toyota_camry_LIFE1_ot_902163_1280.jpg"},{brand:'BMW',model:'X6',year:2014,price:25000,image_url:"https://media.ed.edmunds-media.com/bmw/x6/2016/oem/2016_bmw_x6_4dr-suv_xdrive50i_fq_oem_5_1280.jpg"},{brand:'Daewoo',model:'Nexia',year:2007,price:15000,image_url:"https://s.auto.drom.ru/i24207/c/photos/fullsize/daewoo/nexia/daewoo_nexia_695410.jpg"}];
+  	let elements = "";
+  	var brand1 = cars[0].brand;     var brand2 = cars[1].brand;      var brand3 = cars[2].brand;
+  	var model1 = cars[0].model;     var model2 = cars[1].model;      var model3 = cars[2].model;
+  	var year1 = cars[0].year;       var year2 = cars[1].year;        var year3 = cars[2].year;
+  	var price1 = cars[0].price;     var price2 = cars[1].price;      var price3 = cars[2].price;
+  	var image1 = cars[0].image_url; var image2 = cars[1].image_url;  var image3 = cars[2].image_url;
+
+  	var items = 0;
+  	var img ="";
+
+  	elements += "<div class='car1'>" + "<img src = " + "'"+image1+"'"+"width='200px'>" + "<img id='crt1' src = cart.jpg width='60px' onclick='Adder(1)'>" + "<p>" + brand1 + " " + model1 + "</p>" + "</div>";
+  	elements += "<div class='car2'>" + "<img src = " + "'"+image2+"'"+"width='250px'>" + "<img id='crt2' src = cart.jpg width='60px' onclick='Adder(2)'>" + "<p>" + brand2 + " " + model2 + "</p>" + "</div>";
+  	elements += "<div class='car3'>" + "<img src = " + "'"+image3+"'"+"width='300px'>" + "<img id='crt3' src = cart.jpg width='60px' onclick='Adder(3)'>" + "<p>" + brand3 + " " + model3 + "</p>" + "</div>";
+  	document.getElementById("cars").innerHTML = elements;
+
+  	function Adder(num){
+  		console.log(num);
+  		img = document.getElementById("crt"+num).src;
+  		if(num==1 && img=="file:///C:/Users/asus/Desktop/SDU%202%20course/WEB%20programming/week7/cart.jpg"){
+  			document.getElementById("crt1").src = "dollar.jpg";
+  			document.getElementById("items").innerHTML++;
+  			document.getElementById("sum").innerHTML = parseInt(document.getElementById("sum").innerHTML) + price1;
+  		}
+  		else if(num==2 && img=="file:///C:/Users/asus/Desktop/SDU%202%20course/WEB%20programming/week7/cart.jpg"){
+  			document.getElementById("crt2").src = "dollar.jpg";
+  			document.getElementById("items").innerHTML++;
+  			document.getElementById("sum").innerHTML = parseInt(document.getElementById("sum").innerHTML) + price2;
+  		}
+  		else if(num==3 && img=="file:///C:/Users/asus/Desktop/SDU%202%20course/WEB%20programming/week7/cart.jpg"){
+  			document.getElementById("crt3").src = "dollar.jpg";
+  			document.getElementById("items").innerHTML++;
+  			document.getElementById("sum").innerHTML = parseInt(document.getElementById("sum").innerHTML) + price3;
+  		}
+  		else if(num==1 && img=="file:///C:/Users/asus/Desktop/SDU%202%20course/WEB%20programming/week7/dollar.jpg"){
+  			document.getElementById("crt1").src = "cart.jpg";
+  			document.getElementById("items").innerHTML--;
+  			document.getElementById("sum").innerHTML = parseInt(document.getElementById("sum").innerHTML) - price1;
+  		}
+  		else if(num==2 && img=="file:///C:/Users/asus/Desktop/SDU%202%20course/WEB%20programming/week7/dollar.jpg"){
+  			document.getElementById("crt2").src = "cart.jpg";
+  			document.getElementById("items").innerHTML--;
+  			document.getElementById("sum").innerHTML = parseInt(document.getElementById("sum").innerHTML) - price2;
+  		}
+  		else if(num==3 && img=="file:///C:/Users/asus/Desktop/SDU%202%20course/WEB%20programming/week7/dollar.jpg"){
+  			document.getElementById("crt3").src = "cart.jpg";
+  			document.getElementById("items").innerHTML--;
+  			document.getElementById("sum").innerHTML = parseInt(document.getElementById("sum").innerHTML) - price3;
+  		}
+  	}
+  </script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  </head>
+
+  <body>
+    <select id="countries" onchange="cityChooser()">
+      <option>Select country</option>
+    </select>
+    <select id="cities">
+      <option>Select city</option>
+    </select>
+  </body>
+  <script>
+    let countries = ["Kazakhstan","Russia","England","France"];
+    let cities_by_country = {"Kazakhstan":["Almaty","Astana","Karagandy"],"Russia":["Moscow","Saint-Petersburg","Kazan"],"England":["London","Manchester","Liverpool"],"France":["Paris","Lyon","Marseille"]};
+    //Selectors
+    var i = 0;
+    let selector1 = document.getElementById('countries');
+    let selector2 = document.getElementById('cities');
+    for(i=0; i<=3;i++){
+      let option1 = document.createElement("option"),txt = document.createTextNode(countries[i]);
+      option1.appendChild(txt);
+      option1.setAttribute("value",countries[i]);
+      selector1.insertBefore(option1,selector1.lastChild);
+    }
+    function cityChooser(){console.log(count);
+      document.querySelectorAll('#cities option').forEach(option => option.remove());
+      var count = document.getElementById("countries").value;
+        for(k=0; k<=2; k++){
+          if(document.getElementById("countries").value != "Select country"){
+            let option = document.createElement("option"),txt = document.createTextNode(cities_by_country[count][k]);
+            option.setAttribute("value",cities_by_country[count][i]);
+            option.appendChild(txt);
+            selector2.insertBefore(option,selector2.lastChild);
+          }
+          else{
+            selector2.appendChild("Select city");
+        }
+      }
+    }
+    
+  </script>
+</html>
