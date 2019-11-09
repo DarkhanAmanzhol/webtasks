@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      #cards .card{
+        border:1px solid red;
+        display:flex;
+        width:300px;
+      }
+      #cards .card .title{
+        flex-grow: 1;
+      }
+      #cards .card .price{
+        font-weight: bold;
+        padding-right: 20px;
+      }
+      #loading{
+        display: none;
+      }
+      #cards{
+        width:300px;
+        height:200px;
+        border: 1px solid blue;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <button onclick="clicker('load')">Load</button>
+    <div>
+      <button id="sortByMaker" onclick="clicker('maker')">Sort by maker</button>
+      <button id="sortByPrice" onclick="clicker('price')">Sort by price</button>
+    </div>
+    <div id="cards">
+      <img width="300px" height="200px" id="loading" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"/>
+    </div>
+
+
+    <script defer>
+      let array = [{brand:'US DOLLAR',price: 0},
+                   {brand:'EURO',price:0},
+                   {brand:'RUBLE',price:0},
+                   {brand:'POUND STERLING',price: 0}];
+      function clicker(type){
+        fetch("https://blockchain.info/ticker")
+                      .then(response => response.json())
+                      .then(users => {
+                       let usd = users.USD.sell;
+                       let eur = users.EUR.sell;
+                       let rub = users.RUB.sell;
+                       let gbp = users.GBP.sell;
+                       array = [{brand:'US DOLLAR',price: users.USD.sell},
+                                {brand:'EURO',price:users.EUR.sell},
+                                {brand:'RUBLE',price:users.RUB.sell},
+                                {brand:'POUND STERLING',price: users.GBP.sell}];
+                      switch(type){
+                        case 'maker':
+                        document.getElementById('cards').innerHTML = '';
+                        array.sort((x,y)=>{
+                            return y.brand.length - x.brand.length;
+                          });
+                          for(car of array){
+                            let item = "<div class='card'>"+"<div class='title'>"+car.brand+'</div>'
+                                        +"<div class='price'>"+car.price+'</div>'+'</div>';
+                            document.getElementById('cards').innerHTML += item;
+                          }
+                          break;
+                        case 'price':
+                        document.getElementById('cards').innerHTML = '';
+                          array.sort((x,y)=>{
+                            return y.price - x.price;
+                          });
+                          for(car of array){
+                            let item = "<div class='card'>"+"<div class='title'>"+car.brand+'</div>'
+                                        +"<div class='price'>"+car.price+'</div>'+'</div>';
+                            document.getElementById('cards').innerHTML += item;
+                          }
+                          break;
+                        case 'load':
+                          document.getElementById("loading").style.display = 'block';
+                          setTimeout("Load()",2000);
+                          
+                          break;
+                      }
+                });
+        }
+        function Load(){
+        document.getElementById("loading").style.display = 'none';
+            document.getElementById('cards').innerHTML = "<div class='card'>"+"<div class='title'>"+array[0].brand+'</div>'
+                                                        +"<div class='price'>"+array[0].price+'</div>'+'</div>'
+                                                        +"<div class='card'>"+"<div class='title'>"+array[1].brand+'</div>'
+                                                        +"<div class='price'>"+array[1].price+'</div>'+'</div>'
+                                                        +"<div class='card'>"+"<div class='title'>"+array[2].brand+'</div>'
+                                                        +"<div class='price'>"+array[2].price+'</div>'+'</div>'
+                                                        +"<div class='card'>"+"<div class='title'>"+array[3].brand+'</div>'
+                                                        +"<div class='price'>"+array[3].price+'</div>'+'</div>';
+      }
+    </script>
+  </body>
+
+</html>

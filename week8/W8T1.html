@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+#news{
+	border:1px solid red;
+	width:400px;
+	height:300px;
+}
+</style>
+</head>
+<body>
+
+<div id="news"></div>
+<button id="sport" onclick="news('sport')">Load Sport news</button>
+<button id="politics" onclick="news('politics')">Load Politics news</button>
+<button id="bussiness" onclick="news('bussiness')">Load Bussiness news</button>
+
+
+<script>
+function news(type){
+	let array1 =[];
+	let array2 =[];
+	fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=087d91182b664ed885785f6567932f69')
+                .then(response => response.json())
+                .then(users => {
+                    users.articles.forEach(function(user) {
+                        array1.push(user.title);
+                        array2.push(user.description);
+                    });
+                    switch(type){
+						case 'sport':
+							document.getElementById("news").innerHTML = "<h2>"+array1[2]+"</h2>" + "<div>"+array2[0]+"</div>";
+							break;
+						case 'politics':
+							document.getElementById("news").innerHTML = "<h2>"+array1[0]+"</h2>" + "<div>"+array2[0]+"</div>";
+							break;
+						case 'bussiness':
+							document.getElementById("news").innerHTML = "<h2>"+array1[4]+"</h2>" + "<div>"+array2[4]+"</div>";
+							break;
+					}
+                });
+}
+</script>
+</body>
+</html>
