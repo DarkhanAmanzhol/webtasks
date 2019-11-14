@@ -1,0 +1,11 @@
+<div class="footer">
+			<div class="mini_footer"></div>
+			<div class="img1" data-aos="foot_anim"><img src="amazon-logo.png"></div>
+			<div class="img2" data-aos="foot_anim"><img src="facebook-logo.png"></div>
+			<div class="img3" data-aos="foot_anim"><img src="apple-logo.png"></div>
+			<div class="img4" data-aos="foot_anim"><img src="chrome-logo.png"></div>
+			<div class="foot_word">Other Extra Informations</div>
+			<div class="w1">Help</div>
+		</div>
+		<button id="cart" onclick="showCart()"><img src="shopping-cart.png"></button>
+		<div class="invisibleBox"></div>

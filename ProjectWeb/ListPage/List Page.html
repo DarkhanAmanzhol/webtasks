@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+	<link rel="stylesheet" href="cssList.css">
+	<script src="jscriptList.js" defer></script>
+</head>
+<body style="overflow-x: hidden;">
+	<div class="fixedBoard">
+		<div class="logophoto"><img src="laptop-64.png"></div>
+		<div class="logoword">Laptop.com</div>
+		<nav>
+			<ul>
+				<li><a href="#">Buy</a></li>
+				<li><a href="#">Rent</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<a href="#" class="login_btn">Login</a>
+		</nav>
+		<div class="phone"><img src="phone.png">+7-747-111-25-04</div>
+	</div>
+	<section class="caption">
+		<h2 class="caption">Find You Dream Laptop</h2>
+		<h3 class="properties">Macbook - Acer - Dell</h3>
+	</section>
+	<div class="box"><span id="spinword"></span></div>
+	<div class="boxWords"></div>
+	<div class="laptop_box">
+		<table id="laptops" width="80%">
+			<col width="400px">
+			<col width="400px">
+			<tr>
+				<td>
+					<img id="good0" src="mackbookpro19.jpg">
+					<button id="right" onclick="clickRight(this)"><img src="right.png"></button>
+					<button id="left" onclick="clickLeft(this)"><img src="left.png"></button>
+				</td>
+				<td>
+					<h3>Macbook Pro 2019</h3>
+					<p>Apple - MacBook Pro 15.4" Display with Touch Bar - Intel Core i9 - 16GB Memory - AMD Radeon Pro 560X - 512GB SSD - Space Gray</p>
+				</td>
+				<td>
+					<h3 id="price">$2000</h3>
+					<button id="bucket1"><img src="shopping-cart.png"><span>Add to Cart</span></button>
+					<img id="sale" src="sale.png">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img id="good1" src="dellxps13.jpg">
+					<button id="right" onclick="clickRight(this)"><img src="right.png"></button>
+					<button id="left" onclick="clickLeft(this)"><img src="left.png"></button>
+				</td>
+				<td>
+					<h3>Dell XPS 13</h3>
+					<p>Dell - Inspiron 2-in-1 17.3" Touch-Screen Laptop - Intel Core i7 - 16GB Memory - 512GB SSD + Optane - Silver</p>
+				</td>
+				<td>
+					<h3 id="price">$1600</h3>
+					<button id="bucket2"><img src="shopping-cart.png"><span>Add to Cart</span></button>
+					<img id="sale" src="sale.png">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img id="good2" src="acerswitch3.jpg">
+					<button id="right" onclick="clickRight(this)"><img src="right.png"></button>
+					<button id="left" onclick="clickLeft(this)"><img src="left.png"></button>
+				</td>
+				<td>
+					<h3>Acer Switch 3</h3>
+					<p>Acer - Nitro 5 15.6" Gaming Laptop - Intel Core i5 - 8GB Memory - NVIDIA GeForce GTX 1650 - 1TB Hard Drive + 128GB SSD - Black</p>
+				</td>
+				<td>
+					<h3 id="price">$1400</h3>
+					<button id="bucket3"><img src="shopping-cart.png"><span>Add to Cart</span></button>
+					<img id="sale" src="sale.png">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img id="good3" src="surfacepro.jpg">
+					<button id="right" onclick="clickRight(this)"><img src="right.png"></button>
+					<button id="left" onclick="clickLeft(this)"><img src="left.png"></button>
+				</td>
+				<td>
+					<h3>Surface Pro</h3>
+					<p>Microsoft - Surface Pro 6 - 12.3" Touch-Screen - Intel Core i7 - 8GB Memory - 256GB Solid State Drive - Black</p>
+				</td>
+				<td>
+					<h3 id="price">$2200</h3>
+					<button id="bucket4"><img src="shopping-cart.png"><span>Add to Cart</span></button>
+					<img id="sale" src="sale.png">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="largeBack"></div>
+	<footer>
+            <div class="container">
+                <div class="col-md-12">
+                    <p>&copy; Designed by Darkhan</p>
+                    <div class="space20"></div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
