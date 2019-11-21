@@ -1,4 +1,4 @@
-/*            *//*
+/*            */
 nav{
 	float: right;
 	position: relative;
@@ -31,7 +31,7 @@ nav .login_btn{
     top: -45px;
     border: 2px solid #ffffff;
     background: transparent;
-}*//*
+}/*
 nav{
 	float: right;
 }
@@ -130,36 +130,38 @@ nav ul li{
 	z-index: 8;
 }
 /*****************************************************/
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
+.mtb, .col-md-5 p {
+	margin-top: 50px; 
+	margin-bottom: 50px;
+	color: grey;
 }
-.row: after, .row: before{
-	display: table;
-	content: "";
-}
-.row: after{
-	clear: both;
-}
-.mtb {margin-top: 50px; margin-bottom: 50px;}
 .col-md-8{
 	position: relative;
   	min-height: 1px;
   	padding-right: 15px;
   	padding-left: 15px;
-  	width: 66.66666667%;
+  	width: 66%;
 }
 .col-md-offset-2 {
-    margin-left: 16.66666667%;
+    margin-left: 16%;
 }
-.centered {text-align: center}
+.centered {
+	text-align: center;
+}
 /****************************************************/
 .LaptopAdvantages{
 	border: 2px solid transparent;
-	width: 100%;
+	/*width: 100%;*/
+	position: relative;
+    right: 8px;
+    width: 1400px;
 	height: 150px;
+	background-image: url("http://raiingkaeng.com/images/background-images-for-websites/38178886-background-images-for-websites.jpg");
+	background-size: cover;
 }
 .LaptopAdvantages p{
+	color: blue;
+	font-family: cursive;
 	text-align: center;
 	position: relative;
 	top: 30px;
@@ -171,10 +173,10 @@ nav ul li{
   	min-height: 1px;
   	padding-right: 15px;
   	padding-left: 15px;
-  	width: 41.66666667%;
+  	width: 41%;
 }
 .col-md-offset-1 {
-    margin-left: 8.33333333%;
+    margin-left: 8%;
 }
 h2{
 	font-size: 28px;
@@ -190,22 +192,28 @@ h4{
 /****************************************************/
 .TypeOfLaptops{
 	border: 2px solid transparent;
-	width: 100%;
+	/*width: 100%;*/
+	position: relative;
+    right: 8px;
+    width: 1400px;
 	height: 150px;
-	background-image: url("https://image.freepik.com/free-vector/wavy-smooth-lines-pattern-background_1017-14206.jpg");
+	background-image: url("http://raiingkaeng.com/images/background-images-for-websites/38178886-background-images-for-websites.jpg");
 	background-size: cover;
 }
 .TypeOfLaptops p{
+	color: yellow;
 	text-align: center;
 	position: relative;
 	top: 30px;
 	font-size: 30px;
+	font-family: cursive;
 }
 .pict2{
 	width: 500px;
 	position: absolute;
 	left: 700px;
 	top: 70px;
+	animation: slide 1s ease-in;
 }
 .pict2_1{
 	width: 500px;
@@ -214,6 +222,26 @@ h4{
 .toLeft{
 	position: relative;
 	left: 600px;
+}
+/****************  Animation  **********************/
+.slideRight {
+  transform: skewX(0deg) translateX(500px);
+  transform: skewX(0deg) translateX(500px);
+  transition: ease-out, transform 2s;
+}
+
+.slideRight.is-visible {
+  transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+}
+.slideLeft {
+  transform: skewX(0deg) translateX(-500px);
+  transform: skewX(0deg) translateX(-500px);
+  transition: ease-out, transform 2s;
+}
+.slideLeft.is-visible {
+  transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
 }
 /****************************************************/
 .space20 {
