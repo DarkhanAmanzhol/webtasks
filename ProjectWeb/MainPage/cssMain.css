@@ -1,4 +1,4 @@
-/*            */
+/*            *//*
 nav{
 	float: right;
 	position: relative;
@@ -31,8 +31,15 @@ nav .login_btn{
     top: -45px;
     border: 2px solid #ffffff;
     background: transparent;
+}*//*
+nav{
+	float: right;
 }
-nav .login_btn:hover{
+nav ul li{
+    float: left;
+    margin-left: 30px;
+}*/
+.login_btn:hover{
     background: #ffffff;
     color: #1c3655;
 }
@@ -146,6 +153,68 @@ nav .login_btn:hover{
     margin-left: 16.66666667%;
 }
 .centered {text-align: center}
+/****************************************************/
+.LaptopAdvantages{
+	border: 2px solid transparent;
+	width: 100%;
+	height: 150px;
+}
+.LaptopAdvantages p{
+	text-align: center;
+	position: relative;
+	top: 30px;
+	font-size: 30px;
+}
+.mtb2 { margin-top: 100px; margin-bottom: 100px;}
+.col-md-5{
+	position: relative;
+  	min-height: 1px;
+  	padding-right: 15px;
+  	padding-left: 15px;
+  	width: 41.66666667%;
+}
+.col-md-offset-1 {
+    margin-left: 8.33333333%;
+}
+h2{
+	font-size: 28px;
+}
+h4{
+	font-size: 24px;
+}
+.pict1{
+	position: absolute;
+	left: 900px;
+	bottom: 30px;
+}
+/****************************************************/
+.TypeOfLaptops{
+	border: 2px solid transparent;
+	width: 100%;
+	height: 150px;
+	background-image: url("https://image.freepik.com/free-vector/wavy-smooth-lines-pattern-background_1017-14206.jpg");
+	background-size: cover;
+}
+.TypeOfLaptops p{
+	text-align: center;
+	position: relative;
+	top: 30px;
+	font-size: 30px;
+}
+.pict2{
+	width: 500px;
+	position: absolute;
+	left: 700px;
+	top: 70px;
+}
+.pict2_1{
+	width: 500px;
+	position: absolute;
+}
+.toLeft{
+	position: relative;
+	left: 600px;
+}
 /****************************************************/
 .space20 {
     margin-bottom: 20px;
