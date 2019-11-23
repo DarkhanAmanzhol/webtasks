@@ -7,26 +7,27 @@
 </head>
 <body style="overflow-x: hidden;">
 	<div class="fixedBoard">
-		<div class="logophoto"><img src="laptop-64.png"></div>
-		<div class="logoword">Laptop.com</div>
-		<nav>
-			<ul>
-				<li><a href="#">Buy</a></li>
-				<li><a href="#">Rent</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-			<a href="#" class="login_btn">Login</a>
-		</nav>
-		<div class="phone"><img src="phone.png">+7-747-111-25-04</div>
+          <ul class="nav navbar-nav navbar-right">
+          	<li><a href="#" class="login_btn">Log in / Sign up</a></li>
+            <li><a href="#" class="contact">Contact</a></li>
+            <li><a href="#" class="about">About</a></li>
+            <li><a href="../MainPage/Main Page.html" class="home">Home</a></li>
+            <li><div class="logophoto"><img src="laptop-64.png"></div></li>
+			<li><div class="logoword">Laptop.com</div></li>
+			<li><div class="phone"><img src="phone.png">+7-747-111-25-04</li>
+          </ul>
 	</div>
 	<section class="caption">
-		<h2 class="caption">Find You Dream Laptop</h2>
-		<h3 class="properties">Macbook - Acer - Dell</h3>
+		<h2>Find You Dream Laptop</h2>
+		<h3>Macbook - Acer - Dell</h3>
 	</section>
 	<div class="box"><span id="spinword"></span></div>
-	<div class="boxWords"></div>
-	<div class="laptop_box">
+	<div id="buttonContainer" class="boxWords">
+		<button onclick="showPanel(0)">Ultrabook / </button>
+		<button onclick="showPanel(1)">Netbook / </button>
+		<button onclick="showPanel(2)">Gaming laptops</button>
+	</div>
+	<div id="tabPanel" class="laptop_box">
 		<table id="laptops" width="80%">
 			<col width="400px">
 			<col width="400px">
@@ -46,6 +47,12 @@
 					<img id="sale" src="sale.png">
 				</td>
 			</tr>
+		</table>
+	</div>
+	<div id="tabPanel" class="laptop_box">
+		<table id="laptops" width="80%">
+			<col width="400px">
+			<col width="400px">
 			<tr>
 				<td>
 					<img id="good1" src="dellxps13.jpg">
@@ -78,6 +85,12 @@
 					<img id="sale" src="sale.png">
 				</td>
 			</tr>
+		</table>
+	</div>
+	<div id="tabPanel" class="laptop_box">
+		<table id="laptops" width="80%">
+			<col width="400px">
+			<col width="400px">
 			<tr>
 				<td>
 					<img id="good3" src="surfacepro.jpg">
