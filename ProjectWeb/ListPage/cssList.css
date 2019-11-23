@@ -1,42 +1,117 @@
-/*            */
-nav{
-	float: right;
+@font-face {
+    font-family: 'lato-bold';
+    src: url('../fonts/lato-bold.eot');
+    src: url('../fonts/lato-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bold.woff') format('woff'),
+         url('../fonts/lato-bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('../fonts/lato-regular.eot');
+    src: url('../fonts/lato-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular.woff') format('woff'),
+         url('../fonts/lato-regular.ttf') format('truetype'),
+         url('../fonts/lato-regular.svg#LatRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'p22_corinthia';
+    src: url('../fonts/p22_corinthia.eot');
+    src: url('../fonts/p22_corinthia.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/p22_corinthia.woff') format('woff'),
+         url('../fonts/p22_corinthia.ttf') format('truetype'),
+         url('../fonts/p22_corinthia.svg#P22Corinthia') format('svg');
+}
+/************************************************************************************************/
+.fixedBoard{
+	border: 1px solid transparent;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 75px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.fixedBoard a{
 	position: relative;
-	bottom: 35px;
-	right: 40px;
+	bottom: 86px;
+	text-decoration: none;
+	color: white;
+	float: right;
+	padding: 10px;
+	margin-right: 20px;
+	cursor: pointer;
 }
-nav ul{
-    margin-top: 40px;
-    list-style: none;
-    float: left;
+.logophoto{
+	position: relative;
+	bottom: 160px;
+	right: 1100px;
 }
-
-nav ul li{
-    float: left;
-    margin-left: 40px;
+.logoword{
+	position: relative;
+	right: 950px;
+	bottom: 210px;
+	color: white;
+	font-family: cursive;
+	font-size: 14px;
 }
-nav ul li a,
-nav .login_btn{
-    text-decoration: none;
-    color: #fff;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
-
+.phone{
+	position: relative;
+	right: 750px;
+	bottom: 235px;
+	color: white;
+	font-size: 14px;
 }
-nav .login_btn{
-    float: right;
-    position: absolute;
+.phone img{
+	width: 20px;
+	position: relative;
+	top: 4px;
+	right: 10px;
+}
+.nav {
+  	padding-left: 0;
+  	margin-bottom: 0;
+  	list-style: none;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	position: absolute;
+	right: 30px;
+	top: 85px;
+}
+.contact{
+	right: 200px;
+	top: -115px;
+}
+.about{
+	right: 340px;
+	top: -150px;
+}
+.home{
+	right: 490px;
+	top: -185px;
+}
+.login_btn{
     right: -10px;
-    top: -45px;
-    border: 2px solid #ffffff;
+    top: -80px;
+    border: 2px solid white;
     background: transparent;
 }
-nav .login_btn:hover{
-    background: #ffffff;
+.login_btn:hover{
+    background: white;
     color: #1c3655;
 }
-
+.contact:hover{
+    color: red;
+}
+.about:hover{
+    color: red;
+}
+.home:hover{
+    color: red;
+}
 .caption{
     width: 100%;
     position: absolute;
@@ -59,56 +134,12 @@ nav .login_btn:hover{
 .caption h3{
     color: #fff;
     font-family: "lato-regular", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    margin: -15px 0 0 25px;
+    font-size: 16px;
+    margin: -5px 0 0 25px;
     left: 1px;
 }
 
 
-.fixedBoard{
-	border: 1px solid black;
-	background-color: #333;
-	width: 100%;
-	height: 60px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 99;
-}
-.fixedBoard a{
-	position: relative;
-	bottom: 86px;
-	text-decoration: none;
-	color: white;
-	float: right;
-	padding: 10px;
-	margin-right: 20px;
-	cursor: pointer;
-}
-.logophoto{
-	position: relative;
-	bottom: 2px;
-	left: 20px;
-}
-.logoword{
-	position: relative;
-	left: 130px;
-	bottom: 60px;
-	color: white;
-	font-family: cursive;
-}
-.phone{
-	position: relative;
-	left: 300px;
-	bottom: 80px;
-	color: white;
-}
-.phone img{
-	width: 20px;
-	position: relative;
-	right: 10px;
-	top: 5px;
-}
 .box{
 	/*border: 1px solid transparent;*/
 	position: relative;
@@ -178,8 +209,27 @@ nav .login_btn:hover{
 	background-size: 1200px;
 }*/
 .boxWords{
+	border: 1px solid transparent;
+	height: 100px;
 	position: relative;
-
+	bottom: 20px;
+	right: 8px;
+	width: 1347px;
+}
+.boxWords button{
+	position: relative;
+	left: 450px;
+	margin: 20px -7px;
+	font-size: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+	font-family: sans-serif;
+	background-color: white;
+}
+#tabPanel{
+	display: none;
 }
 td{
 	border-bottom: 1px solid lightgray;
@@ -219,7 +269,7 @@ td{
 	margin-left: 40px;
 }
 .laptop_box{
-	padding: 100px 0;
+	padding: 50px 0;
 }
 table{
 	position: relative;
@@ -317,19 +367,6 @@ table p{
 	top: 15px;
 	left: 600px;
 	font-family: cursive;
-}*//*
-[data-aos="foot_anim"] {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  opacity: 0;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-}
-[data-aos="foot_anim"].aos-animate {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-  opacity: 1;
 }*/
 .w1{
 	position: relative;
