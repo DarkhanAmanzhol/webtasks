@@ -103,7 +103,22 @@ function clickLeft(row){
 function showCart(){
 	let a = document.getElementById("cart").style.display;
 	console.log(a);
-}/*
-AOS.init({
- duration: 1200
-});*/
+}
+
+
+
+var tabButtons = document.querySelectorAll("#buttonContainer button");
+var tabPanels = document.querySelectorAll("#tabPanel");
+
+function showPanel(panelIndex) {
+	tabButtons.forEach(function(node){
+		node.style.backgroundColor="";
+		node.style.color="";
+	});
+	tabButtons[panelIndex].style.backgroundColor='gray';
+	tabButtons[panelIndex].style.color="blueviolet";
+	tabPanels.forEach(function(node){
+		node.style.display="none";
+	});
+	tabPanels[panelIndex].style.display="block";
+}
