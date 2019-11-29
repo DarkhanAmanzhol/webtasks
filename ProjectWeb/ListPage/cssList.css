@@ -219,9 +219,10 @@
 .boxWords button{
 	position: relative;
 	left: 450px;
-	margin: 20px -7px;
+	margin: 20px 1px;/*-7px*/
 	font-size: 30px;
 	border: none;
+	border-radius: 50px;
 	outline: none;
 	cursor: pointer;
 	padding: 10px;
@@ -368,6 +369,33 @@ table p{
 	left: 600px;
 	font-family: cursive;
 }*/
+.largeBack{
+	border: 2px solid transparent;
+	width: 102%;
+	height: 100px;
+	position: relative;
+	right: 9px;
+	top: 35px;
+	background-color: yellow;
+}
+.largeBack .cart{
+	border: none;
+	border-radius: 20px;
+	color: green;
+	outline: none;
+	background-color: lightblue;
+	width :140px;
+	height: 50px;
+	position: absolute;
+	top: 30px;
+	right: 580px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.largeBack .cart:hover{
+	background-color: green;
+	color: blue;
+}
 .w1{
 	position: relative;
 	top: 60px;
