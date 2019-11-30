@@ -1,0 +1,97 @@
+body{
+	background-color: rgba(45, 78, 123, .4);
+}
+.centerTo{
+	margin: 0;
+  	position: absolute;
+  	top: 40%;/*20%*/
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+h1{
+	font-size: 100px;
+	text-align: center;
+}
+h2{
+	font-size: 35px;
+	text-align: center;
+	position: relative;
+	bottom: 40px;
+}
+.Attention{
+	text-align: center;
+	color: grey;
+	font-size: 25px;
+	position: relative;
+	bottom: 40px;
+}
+.backTo{
+	position: relative;
+	left: 250px;
+	font-size: 20px;
+	text-decoration: none;
+	border: 2px solid red;
+	border-radius: 20px;
+	padding: 15px;
+	color: initial;
+}
+.backTo:hover{
+	color: white;
+	background-color: black;
+}
+/***********************************************/
+/*
+footer {
+    background: black;
+    position: relative;
+    right: 8px;
+    top: 333px;
+    width: 1400px;
+}
+.bot {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 270px;
+}
+.left{
+	color: white;
+	position: absolute;
+	left: 50px;
+	top: 20px;
+	font-size: 22px;
+}
+.left_Desc{
+	position: absolute;
+	left: 50px;
+	top: 90px;
+	color: yellow;
+	font-size: 18px;
+	width: 300px;
+}
+.leftImage{
+	width: 60px;
+	margin: 20px;
+	position: relative;
+	left: 40px;
+	top: 130px;
+}
+.right{
+	font-size: 22px;
+	color: white;
+	position: absolute;
+	right: 150px;
+	top: 20px;
+}
+.right_Desc{
+	color: yellow;
+	position: relative;
+	left: 1075px;
+	bottom: 60px;
+}
+.centerSmile{
+	width: 150px;
+	position: absolute;
+	top: 50px;
+	left: 620px;
+}*/
