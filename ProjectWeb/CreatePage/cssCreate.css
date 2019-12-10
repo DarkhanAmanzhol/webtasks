@@ -1,0 +1,170 @@
+.fixedBoard{
+	border: 1px solid transparent;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 75px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.fixedBoard a{
+	position: relative;
+	bottom: 86px;
+	text-decoration: none;
+	color: white;
+	float: right;
+	padding: 10px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.logophoto{
+	position: relative;
+	bottom: 160px;
+	right: 1100px;
+}
+.logoword{
+	position: relative;
+	right: 950px;
+	bottom: 210px;
+	color: white;
+	font-family: cursive;
+	font-size: 14px;
+}
+.phone{
+	position: relative;
+	right: 750px;
+	bottom: 235px;
+	color: white;
+	font-size: 14px;
+}
+.phone img{
+	width: 20px;
+	position: relative;
+	top: 4px;
+	right: 10px;
+}
+.nav {
+  	padding-left: 0;
+  	margin-bottom: 0;
+  	list-style: none;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	position: absolute;
+	right: 30px;
+	top: 85px;
+}
+.contact{
+	right: 200px;
+	top: -80px;
+}
+.about{
+	right: 340px;
+	top: -115px;
+}
+.home{
+	right: 490px;
+	top: -150px;
+}
+.contact:hover{
+    color: red;
+}
+.about:hover{
+    color: red;
+}
+.home:hover{
+    color: red;
+}
+/************************************/
+body{
+	background-color: rgba(40,40,40,.5);
+}
+.container{
+	margin: 0;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -60%);
+  	border: 2px solid red;
+  	border-radius: 5px;
+  	padding: 30px;
+  	background-color: white;
+}
+.toPlace{
+	display: flex;
+	justify-content: center;
+}
+.writer{
+	margin-bottom: 10px;
+	border-radius: 5px;
+	width: 300px;
+	height: 30px;
+}
+.btn{
+	width: 150px;
+	height: 35px;
+	cursor: pointer;
+	background-color: lightblue;
+	border: none;
+	border-radius: 7px; 
+}
+.btn:hover{
+	color: lightblue;
+	background-color: green;
+}
+/************************************/
+footer {
+    background: black;
+    position: relative;
+    right: 8px;
+    top: 480px;
+    width: 1400px;
+}
+.bot {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 270px;
+}
+.left{
+	color: white;
+	position: absolute;
+	left: 50px;
+	top: 20px;
+	font-size: 22px;
+}
+.left_Desc{
+	position: absolute;
+	left: 50px;
+	top: 90px;
+	color: yellow;
+	font-size: 18px;
+	width: 300px;
+}
+.leftImage{
+	width: 60px;
+	margin: 20px;
+	position: relative;
+	left: 40px;
+	top: 130px;
+}
+.right{
+	font-size: 22px;
+	color: white;
+	position: absolute;
+	right: 150px;
+	top: 20px;
+}
+.right_Desc{
+	color: yellow;
+	position: relative;
+	left: 1075px;
+	bottom: 60px;
+}
+.centerSmile{
+	width: 150px;
+	position: absolute;
+	top: 50px;
+	left: 620px;
+}
