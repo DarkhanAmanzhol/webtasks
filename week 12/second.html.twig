@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2/task3</title>
+    <style type="text/css">
+		.lessons .lesson{
+			border:1px solid blue;
+			border-radius:5px;
+			width:300px;
+			margin:5px;
+			overflow:hidden;
+		}
+.lesson .info{ font-size:18px;}
+.lesson .head{ background-color:darkgreen; color:white; display:flex;height:30px;font-size:16px;}
+.lesson .head .title{flex-grow:1}
+.lesson .head .credits{width:25px;height:25px;text-align:center;}
+.info span{margin:5px;}
+.info .grade_title{font-weight:bold;}
+.credits{ border-radius:1em;border:1px solid white;}
+.total{ font-weight:bold;font-size:24px;}
+.failed{ background-color:red;padding:5px;}
+	</style>
+</head>
+
+<body>
+
+    <div class="lessons">
+	{% for lesson in lessons %}
+	<div class="lesson"> 
+		<div class="head">
+			<div class="title">{{lesson.title}}</div>
+			<div class="credits">{{lesson.credits}}</div>
+		</div>
+		<div class="info">
+			<span class="grade_title">FA:</span><span class="grade">{{lesson.FA}}</span>
+			<span class="grade_title">Final:</span><span class="grade">{{lesson.Final}}</span>
+			<span class="grade_title">Total:</span>
+			{% if (lesson.FA*0.6+lesson.Final*0.4) < 50 %}
+				<span class="grade total failed">{{lesson.FA*0.6+lesson.Final*0.4}}</span>
+			{% else %}		
+				<span class="grade total">{{lesson.FA*0.6+lesson.Final*0.4}}</span>
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+</body>
+
+</html>
