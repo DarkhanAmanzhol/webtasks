@@ -1,4 +1,4 @@
-.fixedBoard{
+/*.fixedBoard{
 	border: 1px solid transparent;
 	background-color: rgba(0,0,0,0.6);
 	width: 100%;
@@ -80,6 +80,24 @@
 body{
 	background-color: rgba(40,40,40,.5);
 }
+header a{
+	margin: 0;
+  	position: absolute;
+  	top: 15%;
+  	left: 50%;
+  	transform: translate(-50%, -60%);
+  	z-index: 10;
+  	color: black;
+  	border: 1px solid black;
+  	padding: 10px;
+  	border-radius: 5px;
+  	text-decoration: none;
+  	background-color: white;
+}
+header a:hover{
+	color: white;
+	background-color: black;
+}
 .container{
 	margin: 0;
   	position: absolute;
@@ -113,7 +131,15 @@ body{
 	color: lightblue;
 	background-color: green;
 }
-/************************************/
+footer p{
+	margin: 0;
+  	position: absolute;
+  	top: 80%;
+  	left: 50%;
+  	transform: translate(-50%, -60%);
+  	z-index: 10;
+}
+/************************************//*
 footer {
     background: black;
     position: relative;
@@ -167,4 +193,4 @@ footer {
 	position: absolute;
 	top: 50px;
 	left: 620px;
-}
+}*/
