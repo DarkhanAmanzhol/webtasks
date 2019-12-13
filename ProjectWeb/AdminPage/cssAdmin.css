@@ -107,12 +107,69 @@ table{
 	border-top: 2px solid grey;
 	width: 40%;
 	text-align: center;
+	color: rgba(100,20,120,1);
 }
-
+.toBold{
+	color: cyan;
+}
 table, th, td {
   border: 1px solid grey;
+  height: 40px;
+}
+table button{
+	width: 80%;
+	border: none;
+	border-radius: 5px;
+	background-color: red;
+	cursor: pointer;
+}
+table button:hover{
+	color: red;
+	background-color: white;
 }
 footer p{
 	text-align: center;
 	color: chartreuse;
+}
+#tabPanel{display: none;}
+
+@media screen and (max-width: 480px) {
+  .menu a{
+  	display: none;
+  }
+  .txtImage{
+  	display: none;
+  }
+  .enterImage{
+  	display: none;
+  }
+  .boxWords{
+  	width: 18%;
+  }
+  .boxWords p{
+  	display: none;
+  }
+  .laptop_box{
+  	width: 82%;
+  }
+  .laptop_box .txt{
+	color: cyan;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	margin-top: 30px;
+	}
+	.laptop_box input{
+	border: 1px solid cornsilk;
+	margin-left: 10px;
+	width: 180px;
+	}
+	.addBtn{
+	cursor: pointer;
+	width: 120px;
+	height: 40px;
+	position: relative;
+	left: 130px;
+	bottom: -70px;
+
+	}
 }
