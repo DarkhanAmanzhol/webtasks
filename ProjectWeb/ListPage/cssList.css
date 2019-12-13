@@ -24,7 +24,12 @@
          url('../fonts/p22_corinthia.svg#P22Corinthia') format('svg');
 }
 /************************************************************************************************/
+body{
+	background-color: white;
+}
 .fixedBoard{
+	display: flex;
+	justify-content: center;
 	border: 1px solid transparent;
 	background-color: rgba(0,0,0,0.6);
 	width: 100%;
@@ -46,7 +51,7 @@
 }
 .logophoto{
 	position: relative;
-	bottom: 160px;
+	bottom: 130px;
 	right: 1100px;
 }
 .logoword{
@@ -145,7 +150,7 @@
 	position: relative;
 	bottom: 20px;
 	right: 10px;
-	width: 102%;
+	width: 106%;
 	height: 900px;
 	background: url(image1.jpg) no-repeat bottom center; 
 	background-size: cover;
@@ -378,7 +383,7 @@ table p{
 	top: 35px;
 	background-color: yellow;
 }
-.largeBack .cart{
+.largeBack #cart{
 	border: none;
 	border-radius: 20px;
 	color: green;
@@ -392,10 +397,25 @@ table p{
 	font-size: 20px;
 	cursor: pointer;
 }
-.largeBack .cart:hover{
+.largeBack #cart:hover{
 	background-color: green;
 	color: blue;
 }
+/*********************************************************/
+#cartingInvisible{
+	display: none;
+	border: 2px solid red;
+	border-radius: 15px;
+	background-color: white;
+	width: 500px;
+	height: 300px;
+	position: fixed;
+	top: 33%;
+	left: 33%;
+	z-index: 10;
+	text-align: center;
+}
+/*********************************************************/
 .w1{
 	position: relative;
 	top: 60px;
@@ -450,9 +470,23 @@ footer {
 	left: 1075px;
 	bottom: 60px;
 }
+.right_Desc a{	color: yellow;
+	text-decoration: none;
+}
 .centerSmile{
 	width: 150px;
 	position: absolute;
 	top: 50px;
 	left: 620px;
+}
+
+@media screen and (max-width: 480px) {
+	.fixedBoard a{
+		display: none;
+	}/*
+	.fixedBoard img{
+		position: relative;
+		top: 40px;
+		right: 400px;
+	}*/
 }
