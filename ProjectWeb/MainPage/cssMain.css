@@ -5,8 +5,6 @@
          url('../fonts/lato-bold.woff') format('woff'),
          url('../fonts/lato-bold.ttf') format('truetype'),
          url('../fonts/lato-bold.svg#LatoBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
@@ -16,8 +14,6 @@
          url('../fonts/lato-regular.woff') format('woff'),
          url('../fonts/lato-regular.ttf') format('truetype'),
          url('../fonts/lato-regular.svg#LatRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
@@ -27,11 +23,11 @@
          url('../fonts/p22_corinthia.woff') format('woff'),
          url('../fonts/p22_corinthia.ttf') format('truetype'),
          url('../fonts/p22_corinthia.svg#P22Corinthia') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
 /************************************************************************************************/
 .fixedBoard{
+	display: flex;
+	justify-content: center;
 	border: 1px solid transparent;
 	background-color: rgba(0,0,0,0.6);
 	width: 100%;
@@ -53,7 +49,7 @@
 }
 .logophoto{
 	position: relative;
-	bottom: 160px;
+	bottom: 130px;
 	right: 1100px;
 }
 .logoword{
@@ -121,6 +117,7 @@
 }
 .start_btn{
 	border: 2px solid green;
+	border-radius: 20px;
 	padding: 10px 20px;
 	position: relative;
 	top: 50px;
@@ -130,6 +127,10 @@
 	text-transform: uppercase;
 	font-size: 18px;
 	background-color: #99ffcc;
+}
+.start_btn:hover{
+	color: white;
+	background-color:blue;
 }
 .caption{
     width: 100%;
@@ -162,7 +163,7 @@
 	position: relative;
 	bottom: 20px;
 	right: 10px;
-	width: 102%;
+	width: 106%;
 	height: 900px;
 	background: url(image1.jpg) no-repeat bottom center; 
 	background-size: cover;
@@ -172,23 +173,26 @@
 	z-index: 8;
 }
 /*****************************************************/
-.mtb, .col-md-5 p {
+.mtb, .col2 p {
 	margin-top: 50px; 
 	margin-bottom: 50px;
 	color: grey;
 }
-.col-md-8{
+.col1{
 	position: relative;
   	min-height: 1px;
   	padding-right: 15px;
   	padding-left: 15px;
   	width: 66%;
 }
-.col-md-offset-2 {
+.offset2 {
     margin-left: 16%;
 }
 .centered {
 	text-align: center;
+}
+h1{
+	color: black;
 }
 /****************************************************/
 .LaptopAdvantages{
@@ -210,14 +214,14 @@
 	font-size: 30px;
 }
 .mtb2 { margin-top: 100px; margin-bottom: 100px;}
-.col-md-5{
+.col2{
 	position: relative;
   	min-height: 1px;
   	padding-right: 15px;
   	padding-left: 15px;
   	width: 41%;
 }
-.col-md-offset-1 {
+.offset1 {
     margin-left: 8%;
 }
 h2{
@@ -267,9 +271,9 @@ h4{
 }
 /****************  Animation  **********************/
 .slideRight {
-  transform: skewX(0deg) translateX(500px);
-  transform: skewX(0deg) translateX(500px);
-  transition: ease-out, transform 2s;
+  transform: skewX(0deg) translateX(400px);
+  transform: skewX(0deg) translateX(400px);
+  transition: ease-out, transform 1s;
 }
 
 .slideRight.is-visible {
@@ -277,9 +281,9 @@ h4{
   transform: rotateZ(0deg);
 }
 .slideLeft {
-  transform: skewX(0deg) translateX(-500px);
-  transform: skewX(0deg) translateX(-500px);
-  transition: ease-out, transform 2s;
+  transform: skewX(0deg) translateX(-400px);
+  transform: skewX(0deg) translateX(-400px);
+  transition: ease-out, transform 1s;
 }
 .slideLeft.is-visible {
   transform: rotateZ(0deg);
@@ -339,4 +343,24 @@ footer {
 	position: absolute;
 	top: 50px;
 	left: 620px;
+}
+
+@media screen and (max-width: 480px) {
+	.fixedBoard a{
+		display: none;
+	}
+	.fixedBoard img{
+		position: relative;
+		top: 40px;
+		right: 400px;
+	}
+	.container img{
+		display: none;
+	}
+	.mtb2 .mtb{
+		width: 300px;
+	}
+	.mtb1 .centered, .mtb2 .centered{
+		width: 400px;
+	}
 }
