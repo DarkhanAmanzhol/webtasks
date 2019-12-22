@@ -41,7 +41,7 @@
 	if(isset($_GET['modelLaptop'])){
 		$last_model = $_GET['modelLaptop'];
 		if ($results1->num_rows > 0 && $last_model=="ultrabook") {
-			echo "<table id='laptops' width='80%''>
+			echo "<table id='laptops' width='80%'>
 					<col width='400px'>
 				    <col width='400px'>";
 		    while($row = $results1->fetch_assoc()) {
@@ -56,7 +56,7 @@
 						</td>
 						<td>
 							<h3 id='price'>$".$row['price']."</h3>
-							<button id='bucket1'><img src='shopping-cart.png'><span>Add to Cart</span></button>
+							<button class='basket' onclick='adder(".'"'.$row['model'].' '.$row['name'].'"'.")'><img src='shopping-cart.png'><span>Add to Cart</span></button>
 							<img id='sale' src='sale.png'>
 						</td>
 					</tr>";
@@ -64,7 +64,7 @@
 		    echo "</table>";
 		}
 		if ($results2->num_rows > 0 && $last_model=="netbook") {
-			echo "<table id='laptops' width='80%''>
+			echo "<table id='laptops' width='80%'>
 					<col width='400px'>
 				    <col width='400px'>";
 		    while($row = $results2->fetch_assoc()) {
@@ -79,7 +79,7 @@
 						</td>
 						<td>
 							<h3 id='price'>$".$row['price']."</h3>
-							<button id='bucket1'><img src='shopping-cart.png'><span>Add to Cart</span></button>
+							<button class='basket' onclick='adder(".'"'.$row['model'].' '.$row['name'].'"'.")'><img src='shopping-cart.png'><span>Add to Cart</span></button>
 							<img id='sale' src='sale.png'>
 						</td>
 					</tr>";
@@ -87,7 +87,7 @@
 		    echo "</table>";
 		}
 		if ($results3->num_rows > 0 && $last_model=="gaminglaptop") {
-			echo "<table id='laptops' width='80%''>
+			echo "<table id='laptops' width='80%'>
 					<col width='400px'>
 				    <col width='400px'>";
 		    while($row = $results3->fetch_assoc()) {
@@ -102,7 +102,7 @@
 						</td>
 						<td>
 							<h3 id='price'>$".$row['price']."</h3>
-							<button id='bucket1'><img src='shopping-cart.png'><span>Add to Cart</span></button>
+							<button class='basket' onclick='adder(".'"'.$row['model'].' '.$row['name'].'"'.")'><img src='shopping-cart.png'><span>Add to Cart</span></button>
 							<img id='sale' src='sale.png'>
 						</td>
 					</tr>";
@@ -115,7 +115,7 @@
 		<button onclick="showCart()" id="cart">Cart</button>
 		<div class="cartingInvisible" id="cartingInvisible">
 			<p>You are buying:</p>
-			<div clas="allGoods"></div>
+			<p id="allGoods"></p>
 			<button onclick="okBack()">OK/BACK</button>
 			<button onclick="Buy()">BUY</button>
 		</div>
