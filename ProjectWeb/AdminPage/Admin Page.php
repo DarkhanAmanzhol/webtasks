@@ -2,10 +2,10 @@
 <head>
 	<title>Admin Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--<link rel="stylesheet" type="text/css" href="cssAdmin.css">-->
+	<link rel="stylesheet" type="text/css" href="cssAdmin.css">
 	<script src="jsAdmin.js" defer></script>
 </head>
-<body style="overflow-x: hidden;">
+<body>
 <header>
 	<div class="menu">
 		<img src="laptop-64.png">
@@ -19,23 +19,21 @@
 <div class="wholeFunc">
 	<div id="buttonContainer" class="boxWords">
 		<div class="head">ADD and DELETE buttons:</div>
-		<!--<button onclick="showPanel(0)"><img src="plus-64.png"><p>ADD ITEM</p></button>
-		<button onclick="showPanel(1)"><img src="minus-64.png"><p>DELETE ITEM</p></button>-->
 		<a href="Admin Page.php?page=addItem"><p>ADD ITEM</p></a>
 		<a href="Admin Page.php?page=deleteItem"><p>DELETE ITEM</p></a>
 	</div>
-	<div id="tabPanel" class="laptop_box">
+		<div id="tabPanel" class="laptop_box">
 		<?php
 		if(isset($_GET['page'])){
 			if($_GET['page']=="deleteItem"){
 				echo "<h2>Delete product for sale(laptop)</h2>";
 				$counter = 1;
 				$conn = new mysqli("localhost", "root", "", "laptop");
-				$results1 = $conn->query("SELECT models.model AS model, ultrabook.title AS title, ultrabook.image AS image, ultrabook.price AS price FROM models, ultrabook WHERE models.id = ultrabook.model_number");
+				$results1 = $conn->query("SELECT models.model AS model, ultrabook.name AS name, ultrabook.title AS title, ultrabook.image AS image, ultrabook.price AS price FROM models, ultrabook WHERE models.id = ultrabook.model_number");
 
-				$results2 = $conn->query("SELECT models.model AS model, netbook.title AS title, netbook.image AS image, netbook.price AS price FROM models, netbook WHERE models.id = netbook.model_number");
+				$results2 = $conn->query("SELECT models.model AS model, netbook.name AS name, netbook.title AS title, netbook.image AS image, netbook.price AS price FROM models, netbook WHERE models.id = netbook.model_number");
 
-				$results3 = $conn->query("SELECT models.model AS model, gaminglaptop.title AS title, gaminglaptop.image AS image, gaminglaptop.price AS price FROM models, gaminglaptop WHERE models.id = gaminglaptop.model_number");
+				$results3 = $conn->query("SELECT models.model AS model, gaminglaptop.name AS name, gaminglaptop.title AS title, gaminglaptop.image AS image, gaminglaptop.price AS price FROM models, gaminglaptop WHERE models.id = gaminglaptop.model_number");
 
 				echo "<table>
 					<tr class='toBold'>
@@ -48,9 +46,9 @@
 					while($row = $results1->fetch_assoc()) {
 						echo "<tr>
 						<td>".$counter."</td>
-						<td>".$row['model']."</td>
+						<td>".$row['model']." ".$row['name']."</td>
 						<td>$".$row['price']."</td>
-						<td><a href='Admin Page.php?delete=".$counter."ultrabook"."' class='tbBtn'>delete</a></td>
+						<td><a href='Admin Page.php?delete=".$row['model'].$row['name']."ultrabook"."' class='tbBtn'>delete</a></td>
 					</tr>";$counter = $counter + 1;
 					}
 				}
@@ -58,9 +56,9 @@
 					while($row = $results2->fetch_assoc()) {
 						echo "<tr>
 						<td>".$counter."</td>
-						<td>".$row['model']."</td>
+						<td>".$row['model']." ".$row['name']."</td>
 						<td>$".$row['price']."</td>
-						<td><a href='Admin Page.php?delete=".$counter."netbook"."' class='tbBtn'>delete</a></td>
+						<td><a href='Admin Page.php?delete=".$row['model'].$row['name']."netbook"."' class='tbBtn'>delete</a></td>
 					</tr>";$counter = $counter + 1;
 					}
 				}
@@ -68,9 +66,9 @@
 					while($row = $results3->fetch_assoc()) {
 						echo "<tr>
 						<td>".$counter."</td>
-						<td>".$row['model']."</td>
+						<td>".$row['model']." ".$row['name']."</td>
 						<td>$".$row['price']."</td>
-						<td><a href='Admin Page.php?delete=".$counter."gaminglaptop"."' class='tbBtn'>delete</a></td>
+						<td><a href='Admin Page.php?delete=".$row['model'].$row['name']."gaminglaptop"."' class='tbBtn'>delete</a></td>
 					</tr>";$counter = $counter + 1;
 					}
 				}
@@ -82,6 +80,8 @@
 						<h2>Add product for sale(laptop)</h2>
 						<div class='txt'>Enter product type: ultrabook, netbook, gaminglaptop</div>
 						<input type='text' name='type'>
+						<div class='txt'>Enter product model:</div>
+						<input type='text' name='model'>
 						<div class='txt'>Enter product name:</div>
 						<input type='text' name='name'>
 						<div class='txt'>Enter product characteristic:</div>
@@ -95,33 +95,37 @@
 			}
 		}
 		if(isset($_GET['delete'])){
+			echo "<p>Deleted</p>";
 					$deleteId = $_GET['delete'];
 					$conn = new mysqli("localhost", "root", "", "laptop");
-					$results1 = $conn->query("SELECT id FROM ultrabook");
+					$results1 = $conn->query("SELECT models.model AS model, ultrabook.id AS id, ultrabook.name AS name, ultrabook.title AS title, ultrabook.image AS image, ultrabook.price AS price FROM models, ultrabook WHERE models.id = ultrabook.model_number");
 
-					$results2 = $conn->query("SELECT id FROM netbook");
+				$results2 = $conn->query("SELECT models.model AS model, netbook.id AS id, netbook.name AS name, netbook.title AS title, netbook.image AS image, netbook.price AS price FROM models, netbook WHERE models.id = netbook.model_number");
 
-					$results3 = $conn->query("SELECT id FROM gaminglaptop");
+				$results3 = $conn->query("SELECT models.model AS model, gaminglaptop.id AS id, gaminglaptop.name AS name, gaminglaptop.title AS title, gaminglaptop.image AS image, gaminglaptop.price AS price FROM models, gaminglaptop WHERE models.id = gaminglaptop.model_number");
 
 					if ($results1->num_rows > 0){
 						while($row = $results1->fetch_assoc()){ 
-							if($row['id']."ultrabook"==$deleteId){
+							$last = $row['model'].$row['name']."ultrabook";
+							if($last==$deleteId){
 								$sql = "DELETE FROM ultrabook WHERE id=".$row['id'];
 								$conn->query($sql);
 							}
 						}
 					}
 					if ($results2->num_rows > 0){
-						while($row = $results1->fetch_assoc()){ 
-							if($row['id']."ultrabook"==$deleteId){
+						while($row = $results2->fetch_assoc()){ 
+							$last = $row['model'].$row['name']."netbook";
+							if($last==$deleteId){
 								$sql = "DELETE FROM netbook WHERE id=".$row['id'];
 								$conn->query($sql);
 							}
 						}
 					}
 					if ($results3->num_rows > 0){
-						while($row = $results1->fetch_assoc()){ 
-							if($row['id']."ultrabook"==$deleteId){
+						while($row = $results3->fetch_assoc()){ 
+							$last = $row['model'].$row['name']."gaminglaptop";
+							if($last==$deleteId){
 								$sql = "DELETE FROM gaminglaptop WHERE id=".$row['id'];
 								$conn->query($sql);
 							}
@@ -173,8 +177,9 @@
 <?php
 $conn = new mysqli("localhost", "root", "", "laptop");
 
-if(isset($_POST['submit']) && isset($_POST['type']) && isset($_POST['name']) && isset($_POST['characteristic']) && isset($_POST['price']) && isset($_POST['image'])){
+if(isset($_POST['submit']) && isset($_POST['type']) && isset($_POST['model']) && isset($_POST['name']) && isset($_POST['characteristic']) && isset($_POST['price']) && isset($_POST['image'])){
 	$type = $_POST['type'];
+	$model = $_POST['model'];
 	$name = $_POST['name'];
 	$characteristic = $_POST['characteristic'];
 	$price = $_POST['price'];
@@ -183,11 +188,11 @@ if(isset($_POST['submit']) && isset($_POST['type']) && isset($_POST['name']) && 
 	$count = 1;
 	$countLaptop = 1;
 	if($_POST['submit']){
-		if(!empty($type) && !empty($name) && !empty($characteristic) && !empty($price) && !empty($image)){
+		if(!empty($type) && !empty($name) && !empty($characteristic) && !empty($price) && !empty($image) && !empty($model)){
 			$results = $conn->query("SELECT id, model FROM models");
 			while($row = $results->fetch_assoc()){
 				$count = $count + 1;
-				if($row['model'] == $name){
+				if($row['model'] == $model){
 					$IsOk = "ok";
 					$id = $row['id'];
 				}
@@ -198,17 +203,17 @@ if(isset($_POST['submit']) && isset($_POST['type']) && isset($_POST['name']) && 
 			}
 			if($IsOk=="ok"){
 				$conn = new mysqli("localhost", "root", "", "laptop");
-				$sql = "INSERT INTO ".$type." (id, model_number, title, image, price) VALUES('".$countLaptop."','".$id."','".$characteristic."','".$image."','".$price."')";
+				$sql = "INSERT INTO ".$type." (id, model_number, name, title, image, price) VALUES('".$countLaptop."','".$id."','".$name."','".$characteristic."','".$image."','".$price."')";
 				if($conn->query($sql)===TRUE){echo "OK";}
 				else{echo "not ok";}
 				$conn->close();
 			}
 			else{
-				$formodel = "INSERT INTO models (id, model) VALUES('".$count."','".$name."')";
+				$formodel = "INSERT INTO models (id, model) VALUES('".$count."','".$model."')";
 				if($conn->query($formodel)===TRUE){echo "OK";}
 				$conn->close();
 				$conn = new mysqli("localhost", "root", "", "laptop");
-				$sql = "INSERT INTO ".$type." (id, model_number, title, image, price) VALUES('".$countLaptop."','".$count."','".$characteristic."','".$image."','".$price."')";
+				$sql = "INSERT INTO ".$type." (id, model_number, name title, image, price) VALUES('".$countLaptop."','".$count."','".$name."','".$characteristic."','".$image."','".$price."')";
 				if($conn->query($sql)===TRUE){echo "OK";}
 				$count = 1;
 				$conn->close();
